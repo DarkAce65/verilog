@@ -17,7 +17,6 @@ module fourbit_bitset(input[3:0] x,
         .i1(x1),
         .i0(x0),
         .y(y));
-
 endmodule
 
 module test_fourbit_bitset;
@@ -34,7 +33,7 @@ module test_fourbit_bitset;
         .y(y));
 
     initial begin
-        $monitor("%d x=%4b, index=%2b, value=%2b -> y=%4b",
+        $monitor("%d x=%4b, index=%2b, value=%b -> y=%4b",
                  $time, x, index, value, y);
 
         #10 x     = 4'b0000;

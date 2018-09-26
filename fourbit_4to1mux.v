@@ -3,9 +3,7 @@ module fourbit_4to1mux(input[1:0] sel,
                        input[3:0] i2,
                        input[3:0] i1,
                        input[3:0] i0,
-                       output[3:0] y);
-
-    reg y;
+                       output reg[3:0] y);
 
     always @(sel, i3, i2, i1, i0)
         case (sel)
