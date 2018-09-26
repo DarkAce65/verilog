@@ -1,1 +1,2 @@
 # verilog
+Learning verilog
