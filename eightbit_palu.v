@@ -2,10 +2,8 @@ module eightbit_palu (
     input [1:0] sel,
     input [7:0] a,
     input [7:0] b,
-    output [7:0] f,
-    output ovf);
-
-    reg f, ovf;
+    output reg [7:0] f,
+    output reg ovf);
 
     always @(sel, a, b)
         case (sel)

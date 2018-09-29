@@ -1,9 +1,9 @@
-module fourbit_bitset(input[3:0] x,
-                      input[1:0] index,
+module fourbit_bitset(input [3:0] x,
+                      input [1:0] index,
                       input value,
-                      output[3:0] y);
+                      output [3:0] y);
 
-    wire[3:0] x3, x2, x1, x0;
+    wire [3:0] x3, x2, x1, x0;
 
     assign x3 = {value, x[2:0]};
     assign x2 = {x[3], value, x[1:0]};
@@ -20,11 +20,11 @@ module fourbit_bitset(input[3:0] x,
 endmodule
 
 module test_fourbit_bitset;
-    reg[3:0] x;
-    reg[1:0] index;
+    reg [3:0] x;
+    reg [1:0] index;
     reg value;
 
-    wire[3:0] y;
+    wire [3:0] y;
 
     fourbit_bitset uut(
         .x(x),

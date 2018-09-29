@@ -1,11 +1,11 @@
-module fourbit_comp(input[3:0] a,
-                    input[3:0] b,
+module fourbit_comp(input [3:0] a,
+                    input [3:0] b,
                     output eq,
                     output lt,
                     output gt);
 
-    wire[3:0] na;
-    wire[3:0] x;
+    wire [3:0] na;
+    wire [3:0] x;
 
     not(na[3], a[3]);
     not(na[2], a[2]);
@@ -19,7 +19,7 @@ module fourbit_comp(input[3:0] a,
 
     and(eq, x[3], x[2], x[1], x[0]);
 
-    wire[3:0] lti;
+    wire [3:0] lti;
 
     and(lti[3], na[3], b[3]);
     and(lti[2], x[3], na[2], b[2]);
@@ -35,7 +35,7 @@ module fourbit_comp(input[3:0] a,
 endmodule
 
 module test_fourbit_comp;
-    reg[3:0] a, b;
+    reg [3:0] a, b;
 
     wire eq, gt, lt;
 

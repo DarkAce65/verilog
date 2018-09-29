@@ -1,10 +1,10 @@
-module eightbit_comp(input[7:0] a,
-                     input[7:0] b,
+module eightbit_comp(input [7:0] a,
+                     input [7:0] b,
                      output eq,
                      output lt,
                      output gt);
 
-    wire[7:0] a, b;
+    wire [7:0] a, b;
     wire hb_eq, hb_lt, hb_gt,
         lb_eq, lb_lt, lb_gt;
 
@@ -27,7 +27,7 @@ module eightbit_comp(input[7:0] a,
 endmodule
 
 module test_eightbit_comp;
-    reg[7:0] a, b;
+    reg [7:0] a, b;
 
     wire eq, gt, lt;
 
