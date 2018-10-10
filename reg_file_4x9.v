@@ -1,4 +1,4 @@
-module reg_file(
+module reg_file_4x9 (
     input rst,
     input clk,
     input [1:0] rd0_addr,
@@ -24,13 +24,13 @@ module reg_file(
             data[wr_addr] = wr_data;
 endmodule
 
-module reg_file_tb;
+module reg_file_4x9_tb;
     reg rst, clk, wr_en;
     reg [1:0] rd0_addr, rd1_addr, wr_addr;
     reg [8:0] wr_data;
     wire [8:0] rd0_data, rd1_data;
 
-    reg_file uut(
+    reg_file_4x9 uut(
         .rst(rst),
         .clk(clk),
         .rd0_addr(rd0_addr),
